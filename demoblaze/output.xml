@@ -1,0 +1,989 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 4.0.3 (Python 3.9.11 on win32)" generated="20240411 16:01:28.262" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="C:\Users\AD02291\demoblaze\demoblaze\tests">
+<suite id="s1-s1" name="Demoblaze" source="C:\Users\AD02291\demoblaze\demoblaze\tests\Demoblaze.robot">
+<test id="s1-s1-t1" name="Test Case_1.1_Successful for Login">
+<kw name="Set Test Documentation" library="BuiltIn" type="SETUP">
+<arg>This test case is to verify ${TEST_NAME} component creation and validation</arg>
+<doc>Sets documentation for the current test case.</doc>
+<msg timestamp="20240411 16:00:08.968" level="INFO">Set test documentation to:
+This test case is to verify Test Case_1.1_Successful for Login component creation and validation</msg>
+<status status="PASS" starttime="20240411 16:00:08.967" endtime="20240411 16:00:08.968"/>
+</kw>
+<kw name="Launch DemoblazeURL" library="Keywords Demoblaze">
+<arg>${url}</arg>
+<arg>headless=${headless}</arg>
+<if>
+<branch type="IF" condition="${headless}">
+<kw name="Get Headless options" library="Keywords Demoblaze">
+<var>${options}</var>
+<status status="NOT RUN" starttime="20240411 16:00:08.970" endtime="20240411 16:00:08.970"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 16:00:08.969" endtime="20240411 16:00:08.970"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${options}</var>
+<arg>${None}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240411 16:00:08.971" level="INFO">${options} = None</msg>
+<status status="PASS" starttime="20240411 16:00:08.971" endtime="20240411 16:00:08.971"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:08.970" endtime="20240411 16:00:08.971"/>
+</branch>
+<status status="PASS" starttime="20240411 16:00:08.969" endtime="20240411 16:00:08.971"/>
+</if>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${s3url}</arg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240411 16:00:08.971" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20240411 16:00:08.971" endtime="20240411 16:00:12.686"/>
+</kw>
+<if>
+<branch type="IF" condition="'${headless}'=='${True}'">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="NOT RUN" starttime="20240411 16:00:12.689" endtime="20240411 16:00:12.690"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 16:00:12.687" endtime="20240411 16:00:12.690"/>
+</branch>
+<branch type="ELSE">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240411 16:00:12.691" endtime="20240411 16:00:12.921"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:12.690" endtime="20240411 16:00:12.921"/>
+</branch>
+<status status="PASS" starttime="20240411 16:00:12.687" endtime="20240411 16:00:12.921"/>
+</if>
+<status status="PASS" starttime="20240411 16:00:08.968" endtime="20240411 16:00:12.923"/>
+</kw>
+<kw name="Login To Application" library="Keywords Demoblaze">
+<arg>${userid}</arg>
+<arg>${password}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=login2</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:12.928" endtime="20240411 16:00:13.034"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:13.037" level="INFO">Clicking element 'id=login2'.</msg>
+<status status="PASS" starttime="20240411 16:00:13.035" endtime="20240411 16:00:13.743"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='modal-content']</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:13.743" endtime="20240411 16:00:13.809"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//h5[@id="logInModalLabel"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240411 16:00:13.854" level="INFO">Current page contains element '//h5[@id="logInModalLabel"]'.</msg>
+<status status="PASS" starttime="20240411 16:00:13.813" endtime="20240411 16:00:13.855"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:13.855" endtime="20240411 16:00:13.917"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>300ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 16:00:14.220" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20240411 16:00:13.918" endtime="20240411 16:00:14.220"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>${UserID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:14.221" level="INFO">Typing text 'mayuritodkar1@gmail.com' into text field 'id=loginusername'.</msg>
+<status status="PASS" starttime="20240411 16:00:14.220" endtime="20240411 16:00:14.680"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:14.681" level="INFO">Typing text 'Mayuri' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20240411 16:00:14.680" endtime="20240411 16:00:14.910"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Log in</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:14.912" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20240411 16:00:14.911" endtime="20240411 16:00:15.103"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:12.923" endtime="20240411 16:00:15.103"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240411 16:00:15.103" endtime="20240411 16:00:18.845"/>
+</kw>
+<doc>This test case is to verify Test Case_1.1_Successful for Login component creation and validation</doc>
+<tag>smoke</tag>
+<status status="PASS" starttime="20240411 16:00:08.967" endtime="20240411 16:00:18.846"/>
+</test>
+<test id="s1-s1-t2" name="Test Case_1.2 Invalid User Id for Login">
+<kw name="Set Test Documentation" library="BuiltIn" type="SETUP">
+<arg>This test case is to verify ${TEST_NAME} component creation and validation</arg>
+<doc>Sets documentation for the current test case.</doc>
+<msg timestamp="20240411 16:00:18.852" level="INFO">Set test documentation to:
+This test case is to verify Test Case_1.2 Invalid User Id for Login component creation and validation</msg>
+<status status="PASS" starttime="20240411 16:00:18.851" endtime="20240411 16:00:18.853"/>
+</kw>
+<kw name="Launch DemoblazeURL" library="Keywords Demoblaze">
+<arg>${url}</arg>
+<arg>headless=${headless}</arg>
+<if>
+<branch type="IF" condition="${headless}">
+<kw name="Get Headless options" library="Keywords Demoblaze">
+<var>${options}</var>
+<status status="NOT RUN" starttime="20240411 16:00:18.856" endtime="20240411 16:00:18.856"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 16:00:18.855" endtime="20240411 16:00:18.856"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${options}</var>
+<arg>${None}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240411 16:00:18.858" level="INFO">${options} = None</msg>
+<status status="PASS" starttime="20240411 16:00:18.857" endtime="20240411 16:00:18.858"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:18.856" endtime="20240411 16:00:18.858"/>
+</branch>
+<status status="PASS" starttime="20240411 16:00:18.855" endtime="20240411 16:00:18.859"/>
+</if>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${s3url}</arg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240411 16:00:18.860" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20240411 16:00:18.859" endtime="20240411 16:00:22.347"/>
+</kw>
+<if>
+<branch type="IF" condition="'${headless}'=='${True}'">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="NOT RUN" starttime="20240411 16:00:22.350" endtime="20240411 16:00:22.350"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 16:00:22.348" endtime="20240411 16:00:22.351"/>
+</branch>
+<branch type="ELSE">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240411 16:00:22.352" endtime="20240411 16:00:22.786"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:22.351" endtime="20240411 16:00:22.786"/>
+</branch>
+<status status="PASS" starttime="20240411 16:00:22.347" endtime="20240411 16:00:22.787"/>
+</if>
+<status status="PASS" starttime="20240411 16:00:18.853" endtime="20240411 16:00:22.788"/>
+</kw>
+<kw name="Login To Application" library="Keywords Demoblaze">
+<arg>${invaliduserid}</arg>
+<arg>${password}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=login2</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:22.791" endtime="20240411 16:00:23.102"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:23.104" level="INFO">Clicking element 'id=login2'.</msg>
+<status status="PASS" starttime="20240411 16:00:23.103" endtime="20240411 16:00:23.449"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='modal-content']</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:23.449" endtime="20240411 16:00:23.495"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//h5[@id="logInModalLabel"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240411 16:00:23.549" level="INFO">Current page contains element '//h5[@id="logInModalLabel"]'.</msg>
+<status status="PASS" starttime="20240411 16:00:23.496" endtime="20240411 16:00:23.550"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:23.550" endtime="20240411 16:00:23.613"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>300ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 16:00:23.916" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20240411 16:00:23.614" endtime="20240411 16:00:23.916"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>${UserID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:23.918" level="INFO">Typing text 'mayuritodkar1@gmail.com' into text field 'id=loginusername'.</msg>
+<status status="PASS" starttime="20240411 16:00:23.917" endtime="20240411 16:00:24.311"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:24.314" level="INFO">Typing text 'Mayuri' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20240411 16:00:24.311" endtime="20240411 16:00:24.713"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Log in</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:24.715" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20240411 16:00:24.714" endtime="20240411 16:00:24.919"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:22.789" endtime="20240411 16:00:24.920"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>User does not exist.</arg>
+<arg>DISMISS</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20240411 16:00:24.921" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240411 16:00:30.725" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="0-selenium-screenshot-1.png"&gt;&lt;img src="0-selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240411 16:00:30.231" endtime="20240411 16:00:30.725"/>
+</kw>
+<msg timestamp="20240411 16:00:30.795" level="FAIL">Alert not found in 5 seconds.</msg>
+<status status="FAIL" starttime="20240411 16:00:24.920" endtime="20240411 16:00:30.795"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240411 16:00:30.795" endtime="20240411 16:00:30.796"/>
+</kw>
+<doc>This test case is to verify Test Case_1.2 Invalid User Id for Login component creation and validation</doc>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20240411 16:00:18.847" endtime="20240411 16:00:30.796">Alert not found in 5 seconds.</status>
+</test>
+<test id="s1-s1-t3" name="Test Case_1.3 Invalid Password for Login">
+<kw name="Set Test Documentation" library="BuiltIn" type="SETUP">
+<arg>This test case is to verify ${TEST_NAME} component creation and validation</arg>
+<doc>Sets documentation for the current test case.</doc>
+<msg timestamp="20240411 16:00:30.800" level="INFO">Set test documentation to:
+This test case is to verify Test Case_1.3 Invalid Password for Login component creation and validation</msg>
+<status status="PASS" starttime="20240411 16:00:30.799" endtime="20240411 16:00:30.800"/>
+</kw>
+<kw name="Launch DemoblazeURL" library="Keywords Demoblaze">
+<arg>${url}</arg>
+<arg>headless=${headless}</arg>
+<if>
+<branch type="IF" condition="${headless}">
+<kw name="Get Headless options" library="Keywords Demoblaze">
+<var>${options}</var>
+<status status="NOT RUN" starttime="20240411 16:00:30.804" endtime="20240411 16:00:30.804"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 16:00:30.803" endtime="20240411 16:00:30.804"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${options}</var>
+<arg>${None}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240411 16:00:30.806" level="INFO">${options} = None</msg>
+<status status="PASS" starttime="20240411 16:00:30.806" endtime="20240411 16:00:30.806"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:30.805" endtime="20240411 16:00:30.806"/>
+</branch>
+<status status="PASS" starttime="20240411 16:00:30.803" endtime="20240411 16:00:30.807"/>
+</if>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${s3url}</arg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240411 16:00:30.808" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20240411 16:00:30.807" endtime="20240411 16:00:35.033"/>
+</kw>
+<if>
+<branch type="IF" condition="'${headless}'=='${True}'">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="NOT RUN" starttime="20240411 16:00:35.035" endtime="20240411 16:00:35.037"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 16:00:35.034" endtime="20240411 16:00:35.039"/>
+</branch>
+<branch type="ELSE">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240411 16:00:35.040" endtime="20240411 16:00:35.621"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:35.039" endtime="20240411 16:00:35.622"/>
+</branch>
+<status status="PASS" starttime="20240411 16:00:35.033" endtime="20240411 16:00:35.623"/>
+</if>
+<status status="PASS" starttime="20240411 16:00:30.800" endtime="20240411 16:00:35.623"/>
+</kw>
+<kw name="Login To Application" library="Keywords Demoblaze">
+<arg>${userid}</arg>
+<arg>${invalidpassword}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=login2</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:35.626" endtime="20240411 16:00:35.746"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:35.749" level="INFO">Clicking element 'id=login2'.</msg>
+<status status="PASS" starttime="20240411 16:00:35.746" endtime="20240411 16:00:36.045"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='modal-content']</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:36.046" endtime="20240411 16:00:36.093"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//h5[@id="logInModalLabel"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240411 16:00:36.151" level="INFO">Current page contains element '//h5[@id="logInModalLabel"]'.</msg>
+<status status="PASS" starttime="20240411 16:00:36.094" endtime="20240411 16:00:36.151"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:36.153" endtime="20240411 16:00:36.211"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>300ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 16:00:36.515" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20240411 16:00:36.211" endtime="20240411 16:00:36.516"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>${UserID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:36.520" level="INFO">Typing text 'mayuritodkar1@gmail.com' into text field 'id=loginusername'.</msg>
+<status status="PASS" starttime="20240411 16:00:36.517" endtime="20240411 16:00:37.071"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:37.075" level="INFO">Typing text 'Welcome01#!' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20240411 16:00:37.071" endtime="20240411 16:00:37.301"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Log in</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:37.304" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20240411 16:00:37.302" endtime="20240411 16:00:37.450"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:35.624" endtime="20240411 16:00:37.450"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Wrong password.</arg>
+<arg>DISMISS</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20240411 16:00:37.453" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20240411 16:00:37.451" endtime="20240411 16:00:37.966"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240411 16:00:37.968" endtime="20240411 16:00:41.660"/>
+</kw>
+<doc>This test case is to verify Test Case_1.3 Invalid Password for Login component creation and validation</doc>
+<tag>smoke</tag>
+<status status="PASS" starttime="20240411 16:00:30.798" endtime="20240411 16:00:41.661"/>
+</test>
+<test id="s1-s1-t4" name="Test Case_1.4 Empty UserID and Password for Login">
+<kw name="Set Test Documentation" library="BuiltIn" type="SETUP">
+<arg>This test case is to verify ${TEST_NAME} component creation and validation</arg>
+<doc>Sets documentation for the current test case.</doc>
+<msg timestamp="20240411 16:00:41.664" level="INFO">Set test documentation to:
+This test case is to verify Test Case_1.4 Empty UserID and Password for Login component creation and validation</msg>
+<status status="PASS" starttime="20240411 16:00:41.663" endtime="20240411 16:00:41.664"/>
+</kw>
+<kw name="Launch DemoblazeURL" library="Keywords Demoblaze">
+<arg>${url}</arg>
+<arg>headless=${headless}</arg>
+<if>
+<branch type="IF" condition="${headless}">
+<kw name="Get Headless options" library="Keywords Demoblaze">
+<var>${options}</var>
+<status status="NOT RUN" starttime="20240411 16:00:41.667" endtime="20240411 16:00:41.667"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 16:00:41.666" endtime="20240411 16:00:41.667"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${options}</var>
+<arg>${None}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240411 16:00:41.669" level="INFO">${options} = None</msg>
+<status status="PASS" starttime="20240411 16:00:41.668" endtime="20240411 16:00:41.669"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:41.667" endtime="20240411 16:00:41.669"/>
+</branch>
+<status status="PASS" starttime="20240411 16:00:41.666" endtime="20240411 16:00:41.669"/>
+</if>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${s3url}</arg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240411 16:00:41.671" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20240411 16:00:41.670" endtime="20240411 16:00:45.284"/>
+</kw>
+<if>
+<branch type="IF" condition="'${headless}'=='${True}'">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="NOT RUN" starttime="20240411 16:00:45.287" endtime="20240411 16:00:45.287"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 16:00:45.286" endtime="20240411 16:00:45.288"/>
+</branch>
+<branch type="ELSE">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240411 16:00:45.289" endtime="20240411 16:00:45.601"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:45.288" endtime="20240411 16:00:45.602"/>
+</branch>
+<status status="PASS" starttime="20240411 16:00:45.285" endtime="20240411 16:00:45.602"/>
+</if>
+<status status="PASS" starttime="20240411 16:00:41.664" endtime="20240411 16:00:45.603"/>
+</kw>
+<kw name="Login To Application" library="Keywords Demoblaze">
+<arg>${emptyuserid}</arg>
+<arg>${emptypassword}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=login2</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:45.610" endtime="20240411 16:00:45.840"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:45.843" level="INFO">Clicking element 'id=login2'.</msg>
+<status status="PASS" starttime="20240411 16:00:45.840" endtime="20240411 16:00:46.292"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='modal-content']</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:46.292" endtime="20240411 16:00:46.349"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//h5[@id="logInModalLabel"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240411 16:00:46.588" level="INFO">Current page contains element '//h5[@id="logInModalLabel"]'.</msg>
+<status status="PASS" starttime="20240411 16:00:46.349" endtime="20240411 16:00:46.588"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:46.589" endtime="20240411 16:00:46.628"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>300ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 16:00:46.930" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20240411 16:00:46.629" endtime="20240411 16:00:46.930"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>${UserID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:46.933" level="INFO">Typing text '' into text field 'id=loginusername'.</msg>
+<status status="PASS" starttime="20240411 16:00:46.931" endtime="20240411 16:00:47.225"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:47.228" level="INFO">Typing text '' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20240411 16:00:47.226" endtime="20240411 16:00:47.541"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Log in</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:47.543" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20240411 16:00:47.541" endtime="20240411 16:00:47.743"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:45.605" endtime="20240411 16:00:47.743"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Please fill out Username and Password.</arg>
+<arg>ACCEPT</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20240411 16:00:47.746" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20240411 16:00:47.744" endtime="20240411 16:00:47.762"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240411 16:00:47.762" endtime="20240411 16:00:51.221"/>
+</kw>
+<doc>This test case is to verify Test Case_1.4 Empty UserID and Password for Login component creation and validation</doc>
+<tag>smoke</tag>
+<status status="PASS" starttime="20240411 16:00:41.662" endtime="20240411 16:00:51.221"/>
+</test>
+<test id="s1-s1-t5" name="Test Case_2.0 Logout from The application">
+<kw name="Set Test Documentation" library="BuiltIn" type="SETUP">
+<arg>This test case is to verify ${TEST_NAME} component creation and validation</arg>
+<doc>Sets documentation for the current test case.</doc>
+<msg timestamp="20240411 16:00:51.224" level="INFO">Set test documentation to:
+This test case is to verify Test Case_2.0 Logout from The application component creation and validation</msg>
+<status status="PASS" starttime="20240411 16:00:51.224" endtime="20240411 16:00:51.224"/>
+</kw>
+<kw name="Launch DemoblazeURL" library="Keywords Demoblaze">
+<arg>${url}</arg>
+<arg>headless=${headless}</arg>
+<if>
+<branch type="IF" condition="${headless}">
+<kw name="Get Headless options" library="Keywords Demoblaze">
+<var>${options}</var>
+<status status="NOT RUN" starttime="20240411 16:00:51.226" endtime="20240411 16:00:51.226"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 16:00:51.226" endtime="20240411 16:00:51.226"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${options}</var>
+<arg>${None}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240411 16:00:51.228" level="INFO">${options} = None</msg>
+<status status="PASS" starttime="20240411 16:00:51.227" endtime="20240411 16:00:51.228"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:51.227" endtime="20240411 16:00:51.228"/>
+</branch>
+<status status="PASS" starttime="20240411 16:00:51.226" endtime="20240411 16:00:51.228"/>
+</if>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${s3url}</arg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240411 16:00:51.230" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20240411 16:00:51.228" endtime="20240411 16:00:55.771"/>
+</kw>
+<if>
+<branch type="IF" condition="'${headless}'=='${True}'">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="NOT RUN" starttime="20240411 16:00:55.775" endtime="20240411 16:00:55.776"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 16:00:55.774" endtime="20240411 16:00:55.776"/>
+</branch>
+<branch type="ELSE">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240411 16:00:55.777" endtime="20240411 16:00:56.358"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:55.776" endtime="20240411 16:00:56.359"/>
+</branch>
+<status status="PASS" starttime="20240411 16:00:55.773" endtime="20240411 16:00:56.359"/>
+</if>
+<status status="PASS" starttime="20240411 16:00:51.224" endtime="20240411 16:00:56.360"/>
+</kw>
+<kw name="Login To Application" library="Keywords Demoblaze">
+<arg>${userid}</arg>
+<arg>${password}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=login2</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:56.363" endtime="20240411 16:00:56.695"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:56.700" level="INFO">Clicking element 'id=login2'.</msg>
+<status status="PASS" starttime="20240411 16:00:56.699" endtime="20240411 16:00:57.559"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='modal-content']</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:57.559" endtime="20240411 16:00:57.678"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//h5[@id="logInModalLabel"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240411 16:00:57.754" level="INFO">Current page contains element '//h5[@id="logInModalLabel"]'.</msg>
+<status status="PASS" starttime="20240411 16:00:57.679" endtime="20240411 16:00:57.754"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:57.755" endtime="20240411 16:00:57.793"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>300ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 16:00:58.095" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20240411 16:00:57.793" endtime="20240411 16:00:58.095"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>${UserID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:58.097" level="INFO">Typing text 'mayuritodkar1@gmail.com' into text field 'id=loginusername'.</msg>
+<status status="PASS" starttime="20240411 16:00:58.096" endtime="20240411 16:00:58.844"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:58.848" level="INFO">Typing text 'Mayuri' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20240411 16:00:58.845" endtime="20240411 16:00:59.443"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Log in</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240411 16:00:59.444" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20240411 16:00:59.443" endtime="20240411 16:00:59.709"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:56.360" endtime="20240411 16:00:59.710"/>
+</kw>
+<kw name="Logout from Application" library="Keywords Demoblaze">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=logout2</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:00:59.714" endtime="20240411 16:00:59.775"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 16:01:01.778" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240411 16:00:59.776" endtime="20240411 16:01:01.779"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=logout2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 16:01:01.781" level="INFO">Clicking element 'id=logout2'.</msg>
+<status status="PASS" starttime="20240411 16:01:01.780" endtime="20240411 16:01:02.478"/>
+</kw>
+<status status="PASS" starttime="20240411 16:00:59.711" endtime="20240411 16:01:02.480"/>
+</kw>
+<kw name="Verify The Page After Logout" library="Keywords Demoblaze">
+<arg>${url}</arg>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${currenturl}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20240411 16:01:02.516" level="INFO">${currenturl} = https://www.demoblaze.com/index.html</msg>
+<status status="PASS" starttime="20240411 16:01:02.484" endtime="20240411 16:01:02.516"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${currenturl}</arg>
+<arg>${logouturl}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240411 16:01:02.517" endtime="20240411 16:01:02.518"/>
+</kw>
+<status status="PASS" starttime="20240411 16:01:02.481" endtime="20240411 16:01:02.520"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240411 16:01:02.520" endtime="20240411 16:01:08.473"/>
+</kw>
+<doc>This test case is to verify Test Case_2.0 Logout from The application component creation and validation</doc>
+<tag>smoke</tag>
+<status status="PASS" starttime="20240411 16:00:51.222" endtime="20240411 16:01:08.475"/>
+</test>
+<test id="s1-s1-t6" name="Test Case_3.0 Add Item To Shoping cart">
+<kw name="Set Test Documentation" library="BuiltIn" type="SETUP">
+<arg>This test case is to verify ${TEST_NAME} component creation and validation</arg>
+<doc>Sets documentation for the current test case.</doc>
+<msg timestamp="20240411 16:01:08.479" level="INFO">Set test documentation to:
+This test case is to verify Test Case_3.0 Add Item To Shoping cart component creation and validation</msg>
+<status status="PASS" starttime="20240411 16:01:08.478" endtime="20240411 16:01:08.480"/>
+</kw>
+<kw name="Launch DemoblazeURL" library="Keywords Demoblaze">
+<arg>${url}</arg>
+<arg>headless=${headless}</arg>
+<if>
+<branch type="IF" condition="${headless}">
+<kw name="Get Headless options" library="Keywords Demoblaze">
+<var>${options}</var>
+<status status="NOT RUN" starttime="20240411 16:01:08.485" endtime="20240411 16:01:08.485"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 16:01:08.484" endtime="20240411 16:01:08.485"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${options}</var>
+<arg>${None}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240411 16:01:08.487" level="INFO">${options} = None</msg>
+<status status="PASS" starttime="20240411 16:01:08.486" endtime="20240411 16:01:08.487"/>
+</kw>
+<status status="PASS" starttime="20240411 16:01:08.486" endtime="20240411 16:01:08.489"/>
+</branch>
+<status status="PASS" starttime="20240411 16:01:08.484" endtime="20240411 16:01:08.489"/>
+</if>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${s3url}</arg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240411 16:01:08.491" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20240411 16:01:08.489" endtime="20240411 16:01:12.798"/>
+</kw>
+<if>
+<branch type="IF" condition="'${headless}'=='${True}'">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="NOT RUN" starttime="20240411 16:01:12.800" endtime="20240411 16:01:12.801"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 16:01:12.799" endtime="20240411 16:01:12.801"/>
+</branch>
+<branch type="ELSE">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240411 16:01:12.803" endtime="20240411 16:01:13.066"/>
+</kw>
+<status status="PASS" starttime="20240411 16:01:12.801" endtime="20240411 16:01:13.066"/>
+</branch>
+<status status="PASS" starttime="20240411 16:01:12.799" endtime="20240411 16:01:13.068"/>
+</if>
+<status status="PASS" starttime="20240411 16:01:08.481" endtime="20240411 16:01:13.068"/>
+</kw>
+<kw name="Login To Application" library="Keywords Demoblaze">
+<arg>${userid}</arg>
+<arg>${password}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=login2</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:01:13.071" endtime="20240411 16:01:13.361"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 16:01:13.363" level="INFO">Clicking element 'id=login2'.</msg>
+<status status="PASS" starttime="20240411 16:01:13.361" endtime="20240411 16:01:14.187"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='modal-content']</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:01:14.188" endtime="20240411 16:01:14.437"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//h5[@id="logInModalLabel"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240411 16:01:14.503" level="INFO">Current page contains element '//h5[@id="logInModalLabel"]'.</msg>
+<status status="PASS" starttime="20240411 16:01:14.438" endtime="20240411 16:01:14.505"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:01:14.506" endtime="20240411 16:01:14.571"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>300ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 16:01:14.873" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20240411 16:01:14.572" endtime="20240411 16:01:14.873"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>${UserID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 16:01:14.876" level="INFO">Typing text 'mayuritodkar1@gmail.com' into text field 'id=loginusername'.</msg>
+<status status="PASS" starttime="20240411 16:01:14.874" endtime="20240411 16:01:15.701"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 16:01:15.703" level="INFO">Typing text 'Mayuri' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20240411 16:01:15.702" endtime="20240411 16:01:16.273"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Log in</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240411 16:01:16.276" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20240411 16:01:16.273" endtime="20240411 16:01:16.522"/>
+</kw>
+<status status="PASS" starttime="20240411 16:01:13.069" endtime="20240411 16:01:16.523"/>
+</kw>
+<kw name="Click on Link" library="Keywords Demoblaze">
+<arg>Phones</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//a[text()='${linkName}']</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:01:16.525" endtime="20240411 16:01:16.581"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 16:01:17.585" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240411 16:01:16.582" endtime="20240411 16:01:17.585"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[text()='${linkName}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 16:01:17.588" level="INFO">Clicking element '//a[text()='Phones']'.</msg>
+<status status="PASS" starttime="20240411 16:01:17.586" endtime="20240411 16:01:17.956"/>
+</kw>
+<status status="PASS" starttime="20240411 16:01:16.523" endtime="20240411 16:01:17.958"/>
+</kw>
+<kw name="Click on Link" library="Keywords Demoblaze">
+<arg>${item}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//a[text()='${linkName}']</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:01:17.960" endtime="20240411 16:01:17.998"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 16:01:19.001" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240411 16:01:17.999" endtime="20240411 16:01:19.001"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[text()='${linkName}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 16:01:19.003" level="INFO">Clicking element '//a[text()='Nexus 6']'.</msg>
+<status status="PASS" starttime="20240411 16:01:19.002" endtime="20240411 16:01:19.648"/>
+</kw>
+<status status="PASS" starttime="20240411 16:01:17.958" endtime="20240411 16:01:19.649"/>
+</kw>
+<kw name="Click on Link" library="Keywords Demoblaze">
+<arg>Add to cart</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//a[text()='${linkName}']</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:01:19.652" endtime="20240411 16:01:20.045"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 16:01:21.048" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240411 16:01:20.046" endtime="20240411 16:01:21.048"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[text()='${linkName}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 16:01:21.050" level="INFO">Clicking element '//a[text()='Add to cart']'.</msg>
+<status status="PASS" starttime="20240411 16:01:21.049" endtime="20240411 16:01:21.223"/>
+</kw>
+<status status="PASS" starttime="20240411 16:01:19.649" endtime="20240411 16:01:21.226"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Product added.</arg>
+<arg>ACCEPT</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20240411 16:01:21.229" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20240411 16:01:21.227" endtime="20240411 16:01:21.750"/>
+</kw>
+<kw name="Click on Link" library="Keywords Demoblaze">
+<arg>Cart</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//a[text()='${linkName}']</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:01:21.753" endtime="20240411 16:01:21.795"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 16:01:22.797" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240411 16:01:21.796" endtime="20240411 16:01:22.797"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[text()='${linkName}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 16:01:22.799" level="INFO">Clicking element '//a[text()='Cart']'.</msg>
+<status status="PASS" starttime="20240411 16:01:22.798" endtime="20240411 16:01:23.510"/>
+</kw>
+<status status="PASS" starttime="20240411 16:01:21.751" endtime="20240411 16:01:23.511"/>
+</kw>
+<kw name="Verify Items On Cart" library="Keywords Demoblaze">
+<arg>${item}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>(//tr/td[text()='${item}'])[1]</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:01:23.514" endtime="20240411 16:01:24.492"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>(//tr/td[text()='${item}'])[1]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240411 16:01:24.519" level="INFO">Current page contains element '(//tr/td[text()='Nexus 6'])[1]'.</msg>
+<status status="PASS" starttime="20240411 16:01:24.493" endtime="20240411 16:01:24.519"/>
+</kw>
+<status status="PASS" starttime="20240411 16:01:23.512" endtime="20240411 16:01:24.520"/>
+</kw>
+<kw name="Delete Added Item" library="Keywords Demoblaze">
+<arg>${item}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>(//tr/td[text()='${item}']/following-sibling::td[2]/a)[1]</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 16:01:24.522" endtime="20240411 16:01:24.567"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//tr/td[text()='${item}']/following-sibling::td[2]/a)[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 16:01:24.570" level="INFO">Clicking element '(//tr/td[text()='Nexus 6']/following-sibling::td[2]/a)[1]'.</msg>
+<status status="PASS" starttime="20240411 16:01:24.568" endtime="20240411 16:01:24.816"/>
+</kw>
+<status status="PASS" starttime="20240411 16:01:24.521" endtime="20240411 16:01:24.817"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240411 16:01:24.817" endtime="20240411 16:01:27.884"/>
+</kw>
+<doc>This test case is to verify Test Case_3.0 Add Item To Shoping cart component creation and validation</doc>
+<tag>smoke</tag>
+<status status="PASS" starttime="20240411 16:01:08.477" endtime="20240411 16:01:27.885"/>
+</test>
+<status status="FAIL" starttime="20240411 16:00:08.585" endtime="20240411 16:01:27.887"/>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
+<status status="FAIL" starttime="20240411 16:00:08.564" endtime="20240411 16:01:27.892"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="5" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="5" fail="1" skip="0" id="s1-s1" name="Demoblaze">Tests.Demoblaze</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

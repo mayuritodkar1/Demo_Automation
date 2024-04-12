@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="DNBComponentValidation" type="LIBRARY" format="ROBOT" scope="TEST" namedargs="true" generated="2022-03-31T12:53:32Z" specversion="2" source="..\..\..\dce-automation\resources\PageObjectLib\DNBNO\DNBComponentValidation.py" lineno="13">
+<version></version>
+<scope>test case</scope>
+<namedargs>yes</namedargs>
+<doc>Documentation for library ``DNBComponentValidation``.</doc>
+<kw name="Add New Path Button Click" lineno="951">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Add Total Six Nav Card And Check Status Of Add Button" lineno="309">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Add Total Six Products And Check Status Of Add Button" lineno="705">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Add Two Products Rows In List" lineno="711">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Check Close Function On Popups" lineno="383">
+<arguments>
+<arg>slocator</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Check Error Not Visible" lineno="372">
+<arguments>
+<arg>conditionCompaire</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Add Check Icon Button" lineno="217">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Edit Button And Close" lineno="267">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click External Symbol Button" lineno="213">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Illustration Button" lineno="205">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click LCTA Button" lineno="209">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click On Add New Item Button" lineno="927">
+<arguments>
+<arg>sLabel</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click On Select Button" lineno="931">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Show Icon Button" lineno="222">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter Text Into SEO Description" lineno="234">
+<arguments>
+<arg>stext</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter The Text Into Embed URL Text Box" lineno="238">
+<arguments>
+<arg>stext</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter Values For BodyText" lineno="939">
+<arguments>
+<arg>sIndex</arg>
+<arg>sValue</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter Values For Header Text Feild" lineno="947">
+<arguments>
+<arg>sIndex</arg>
+<arg>sValue</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter Values For Steps" lineno="943">
+<arguments>
+<arg>sIndex</arg>
+<arg>sValue</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter Values For USP" lineno="935">
+<arguments>
+<arg>sIndex</arg>
+<arg>sValue</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Error Text Validation Common Component" lineno="736">
+<arguments>
+<arg>conditionCompaire</arg>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Error Text Validation Generic" lineno="878">
+<arguments>
+<arg>sLabel</arg>
+<arg>SText</arg>
+<arg>SExpectedError</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Error Text Validation Important Message Component" lineno="716">
+<arguments>
+<arg>conditionCompaire</arg>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Error Text Validation Product Banner Component" lineno="726">
+<arguments>
+<arg>conditionCompaire</arg>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Error Text Validation Product Component" lineno="152">
+<arguments>
+<arg>conditionCompaire</arg>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Mouser Over Action Done" lineno="693">
+<arguments>
+<arg>sLable</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Page Name" source="..\..\..\..\..\Python381\lib\site-packages\PageObjectLibrary\pageobject.py" lineno="94">
+<arguments>
+</arguments>
+<doc>Return the name of the current page</doc>
+</kw>
+<kw name="Get Page Title Error Text" lineno="134">
+<arguments>
+<arg>conditionCompaire</arg>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Locator For SEO Description Mandatory Icon" lineno="242">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Locator For Warining Icon" lineno="367">
+<arguments>
+<arg>sname</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Navigate To Content Tab" lineno="230">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Navigate To Properties Tab" lineno="226">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select Custom Radio Button" lineno="891">
+<arguments>
+<arg>sLabel</arg>
+<arg>xlabel=span</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select Radio Button Based On Value" lineno="896">
+<arguments>
+<arg>sLabel</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify Button Disabled Func" lineno="903">
+<arguments>
+<arg>btnName</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify HelpText For Illustration Button" lineno="251">
+<arguments>
+<arg>stext</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify HelpText For Navigation Cards" lineno="258">
+<arguments>
+<arg>stext</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify No Items Text" lineno="702">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify Page Title Error Disappears" lineno="888">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify SEO Error Disappears Along With Right Check" lineno="245">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify The Count Of Feild" lineno="392">
+<arguments>
+<arg>sfeild</arg>
+<arg>scount</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify The Error Text" lineno="275">
+<arguments>
+<arg>conditionCompaire</arg>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify The Help Text Under Common Component" lineno="461">
+<arguments>
+<arg>scondition</arg>
+<arg>stext</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify The Help Text Under Important Message Component" lineno="432">
+<arguments>
+<arg>scondition</arg>
+<arg>stext</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify The Help Text Under Nav Card" lineno="315">
+<arguments>
+<arg>scondition</arg>
+<arg>stext</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify The Help Text Under Product Banner Component" lineno="442">
+<arguments>
+<arg>scondition</arg>
+<arg>stext</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify The Help Text Under Product Component" lineno="403">
+<arguments>
+<arg>scondition</arg>
+<arg>stext</arg>
+</arguments>
+<doc></doc>
+</kw>
+</keywordspec>

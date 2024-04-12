@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="CustomePythonMethods" type="LIBRARY" format="ROBOT" scope="TEST" namedargs="true" generated="2022-03-31T12:53:28Z" specversion="2" source="..\..\..\dce-automation\resources\PageObjectLib\DNBNO\CustomePythonMethods.py" lineno="13">
+<version></version>
+<scope>test case</scope>
+<namedargs>yes</namedargs>
+<doc>Documentation for library ``CustomePythonMethods``.</doc>
+<kw name="Add New Colums Items" lineno="497">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Add New Items In Flow" lineno="493">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Add New Questions Items" lineno="107">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Add New Rows Items" lineno="501">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Add New Tip Section" lineno="525">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Add The Data In Columns" lineno="505">
+<arguments>
+<arg>value</arg>
+<arg>indexI</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Add The Data In The Row Header" lineno="509">
+<arguments>
+<arg>value</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Add Third Selling Point" lineno="479">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Clear The Text Box" lineno="132">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Delete Button" lineno="589">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Delete Row Icon" lineno="565">
+<arguments>
+<arg>sVal</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Menu Tabs Button" lineno="435">
+<arguments>
+<arg>name</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click On Add Button" lineno="552">
+<arguments>
+<arg>sLabel</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click On Delete Button" lineno="556">
+<arguments>
+<arg>sLabel</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click On Edit Button" lineno="548">
+<arguments>
+<arg>sLabel</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click On Select Experience Fragment" lineno="287">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Pencil On FPB" lineno="126">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Pencil On NavigationCards" lineno="123">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Pencil On PageTitle" lineno="119">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Pencil On Text" lineno="129">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Remove Button" lineno="593">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click The DNB Contact Button" lineno="294">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click The DNB Lukk Button" lineno="311">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click The DNB Meny Button" lineno="307">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click To Proccess Flow Expand Btn" lineno="459">
+<arguments>
+<arg>btnId</arg>
+<arg>btntext</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Custom Toggle Button Click" lineno="560">
+<arguments>
+<arg>sLabel</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Delete Items Verify Error Message" lineno="170">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Edit Navigation Card Items" lineno="176">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Comparision Table BackToTableRowsPath Locator" lineno="522">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Comparision Table Row Locator" lineno="515">
+<arguments>
+<arg>y</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Comparision Table TableCellText Locator" lineno="519">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Data Added To The MultiRow Input Feild" lineno="102">
+<arguments>
+<arg>lTitle</arg>
+<arg>lPostion</arg>
+<arg>iText</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get DNBContacts Link Text" lineno="298">
+<arguments>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Hyperlink Path" lineno="290">
+<arguments>
+<arg>svalue</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get IntroText PreviewPage" lineno="180">
+<arguments>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Page Name" source="..\..\..\..\..\Python381\lib\site-packages\PageObjectLibrary\pageobject.py" lineno="94">
+<arguments>
+</arguments>
+<doc>Return the name of the current page</doc>
+</kw>
+<kw name="Navigate To CategoryPage" lineno="90">
+<arguments>
+<arg>URL</arg>
+<arg>Categorypagename</arg>
+<arg>FixedUrl</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Navigate To Product Page" lineno="98">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Navigate To Subcategory Page" lineno="94">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Perform Mouse Over Action" lineno="464">
+<arguments>
+<arg>btnName</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Perform Mouse Over Action Generic Method" lineno="536">
+<arguments>
+<arg>lLabelName</arg>
+<arg>btnName</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Perform Mouse Over Action Image Collage" lineno="528">
+<arguments>
+<arg>btnName</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select DNBSite" lineno="112">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select Iframe" lineno="136">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select Locator For Sec Nav Ancher Select" lineno="447">
+<arguments>
+<arg>sloc</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select The Variant" lineno="441">
+<arguments>
+<arg>stype</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select Value From Checkbox" lineno="544">
+<arguments>
+<arg>slabel</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Set Selling Point Text Details" lineno="482">
+<arguments>
+<arg>values</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Set Value For The Disclaimer" lineno="490">
+<arguments>
+<arg>stext</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify And Click Element" lineno="452">
+<arguments>
+<arg>saction</arg>
+<arg>selement</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify Delete Popup Text And Delete Row" lineno="570">
+<arguments>
+<arg>stext</arg>
+<arg>scondition=SkeepClose</arg>
+<arg>SDeletebtn=Row</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify DNB Footer Page Details And Text" lineno="393">
+<arguments>
+<arg>conditionCompaire</arg>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify FBBanner CTA Details" lineno="211">
+<arguments>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify Generic HTML Tag Text" lineno="264">
+<arguments>
+<arg>conditionCompaire</arg>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify HelpText For Illustration NavigationCard" lineno="154">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify HelpText For Introtext" lineno="147">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify HelpText For NavigationCard List" lineno="163">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify HelpText For TitleH1" lineno="139">
+<arguments>
+<arg>stext</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify Menu Link And Text" lineno="315">
+<arguments>
+<arg>conditionCompaire</arg>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify Paragraph Text Details" lineno="192">
+<arguments>
+<arg>conditionCompaire</arg>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify Product List Details" lineno="222">
+<arguments>
+<arg>conditionCompaire</arg>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+</keywordspec>

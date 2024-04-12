@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="NyheterPublisherArticle" type="LIBRARY" format="ROBOT" scope="TEST" namedargs="true" generated="2022-03-31T12:53:25Z" specversion="2" source="..\..\..\dce-automation\resources\PageObjectLib\NyheterPublisherArticle.py" lineno="10">
+<version></version>
+<scope>test case</scope>
+<namedargs>yes</namedargs>
+<doc>Documentation for library ``NyheterPublisherArticle``.</doc>
+<kw name="Click On Link" lineno="61">
+<arguments>
+<arg>xpath</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Category" lineno="81">
+<arguments>
+<arg>Category</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Color Code Of Breadcrum On ArticlePage" lineno="21">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Hero Component Existance" lineno="50">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get HeroImage Added" lineno="36">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get HeroImage Src" lineno="65">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Page Name" source="..\..\..\..\..\Python381\lib\site-packages\PageObjectLibrary\pageobject.py" lineno="94">
+<arguments>
+</arguments>
+<doc>Return the name of the current page</doc>
+</kw>
+<kw name="Get Social Share Title On ArticlePage SP" lineno="26">
+<arguments>
+<arg>typeOfSS</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Xpath For Category" lineno="77">
+<arguments>
+<arg>Category</arg>
+</arguments>
+<doc></doc>
+</kw>
+</keywordspec>

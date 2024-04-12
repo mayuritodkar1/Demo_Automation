@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="BarnLibraries" type="LIBRARY" format="ROBOT" scope="TEST" namedargs="true" generated="2022-03-31T12:53:26Z" specversion="2" source="..\..\..\dce-automation\resources\PageObjectLib\BarnLibraries.py" lineno="9">
+<version></version>
+<scope>test case</scope>
+<namedargs>yes</namedargs>
+<doc>Documentation for library ``BarnLibraries``.</doc>
+<kw name="Click Article With Text" lineno="59">
+<arguments>
+<arg>ArticleText</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Article With Text1" lineno="54">
+<arguments>
+<arg>ArticleText</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Category With Text" lineno="17">
+<arguments>
+<arg>categoryname</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get H1 Text Details" lineno="100">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get H2 Text Details" lineno="108">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get H3 Text Details" lineno="118">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Locator For Category With Name" lineno="28">
+<arguments>
+<arg>categoryname</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Locator For SocialShare" lineno="68">
+<arguments>
+<arg>shocialsharename</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Page Name" source="..\..\..\..\..\Python381\lib\site-packages\PageObjectLibrary\pageobject.py" lineno="94">
+<arguments>
+</arguments>
+<doc>Return the name of the current page</doc>
+</kw>
+<kw name="Get Page Source" lineno="44">
+<arguments>
+<arg>testabletext</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Text For Category With 19plus" lineno="25">
+<arguments>
+<arg>categoryname</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Text For Category With Locator" lineno="22">
+<arguments>
+<arg>categoryname</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="GetCharSet From ViewPageSource" lineno="86">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="GetOgTitle From ViewPageSource" lineno="79">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="GetOgURL From ViewPageSource" lineno="72">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="GetSiteName From ViewPageSource" lineno="93">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Navigate To Category With Text" lineno="32">
+<arguments>
+<arg>categoryname</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify The Title With Partial Text" lineno="37">
+<arguments>
+<arg>partialtext</arg>
+</arguments>
+<doc></doc>
+</kw>
+</keywordspec>

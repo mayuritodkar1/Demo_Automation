@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="LoginPage" type="LIBRARY" format="ROBOT" scope="TEST" namedargs="true" generated="2022-03-31T12:53:21Z" specversion="2" source="..\..\..\dce-automation\resources\PageObjectLib\LoginPage.py" lineno="6">
+<version></version>
+<scope>test case</scope>
+<namedargs>yes</namedargs>
+<doc>Documentation for library ``LoginPage``.</doc>
+<kw name="Click Button AEM" lineno="163">
+<arguments>
+<arg>ButtonName</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Category With Name" lineno="221">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Create" lineno="138">
+<arguments>
+<arg>buttonName</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Delete With Name" lineno="224">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click DNBBarn" lineno="112">
+<arguments>
+<arg>barnSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Forced Delete" lineno="227">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Home" lineno="130">
+<arguments>
+<arg>homepage</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click On Custom" lineno="206">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click On Search" lineno="171">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Page" lineno="147">
+<arguments>
+<arg>Page</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click PageImageLabel Custom" lineno="209">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Save Close" lineno="177">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Template" lineno="155">
+<arguments>
+<arg>TemplateName</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click The Submit Button" lineno="91">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Create Category Name" lineno="249">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter Description" lineno="197">
+<arguments>
+<arg>description</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter Page Title" lineno="191">
+<arguments>
+<arg>pagetitle</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter PageTitle Custom" lineno="203">
+<arguments>
+<arg>pageTitle_custom</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter Password" lineno="88">
+<arguments>
+<arg>password</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter Path PageOfImage" lineno="200">
+<arguments>
+<arg>pageimage</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter Search Text" lineno="174">
+<arguments>
+<arg>searchTextVal</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter SubTitle" lineno="194">
+<arguments>
+<arg>subtitle</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter Text Page Image Custom" lineno="238">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter Title" lineno="188">
+<arguments>
+<arg>titlename</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Enter Username" lineno="85">
+<arguments>
+<arg>username</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Page Name" source="..\..\..\..\..\Python381\lib\site-packages\PageObjectLibrary\pageobject.py" lineno="94">
+<arguments>
+</arguments>
+<doc>Return the name of the current page</doc>
+</kw>
+<kw name="Get SubTitle" lineno="212">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get URL" lineno="217">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Login As A Approver" lineno="64">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Login As A Contributor" lineno="57">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Login As A Editor" lineno="71">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Login As A Normal User" lineno="43">
+<arguments>
+<arg>userName</arg>
+<arg>passWord</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Login As A Super User" lineno="78">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Login As Prod User" lineno="50">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select Article" lineno="184">
+<arguments>
+<arg>ArticleName</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select Category" lineno="180">
+<arguments>
+<arg>CategoryName</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select Category Page" lineno="230">
+<arguments>
+<arg>category</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select DNBApp" lineno="119">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select GetSections" lineno="126">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select Navigation" lineno="96">
+<arguments>
+<arg>typeofNavigation</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Select Site Type" lineno="104">
+<arguments>
+<arg>typeofSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Waittime" lineno="246">
+<arguments>
+<arg>time</arg>
+</arguments>
+<doc></doc>
+</kw>
+</keywordspec>

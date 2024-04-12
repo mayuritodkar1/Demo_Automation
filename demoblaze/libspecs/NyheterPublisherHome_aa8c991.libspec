@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="NyheterPublisherHome" type="LIBRARY" format="ROBOT" scope="TEST" namedargs="true" generated="2022-03-31T12:53:23Z" specversion="2" source="..\..\..\dce-automation\resources\PageObjectLib\NyheterPublisherHome.py" lineno="10">
+<version></version>
+<scope>test case</scope>
+<namedargs>yes</namedargs>
+<doc>Documentation for library ``NyheterPublisherHome``.</doc>
+<kw name="Click AltOmBolig Footer" lineno="397">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Bolig Category" lineno="358">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Bolig Category Menu" lineno="26">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click BorsOgMarks Category" lineno="366">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click BorsOgMarks Category Menu" lineno="31">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click DinOkonomi Category" lineno="370">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click DinOkonomi Category Menu" lineno="36">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click DNBNO Footer" lineno="402">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click EtiskInnholdSplakat Footer" lineno="392">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Grunder Category" lineno="374">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Grunder Category Menu" lineno="41">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click KontactUs Footer" lineno="387">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Meninger Category Menu" lineno="51">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click OmDNBNyheter Footer" lineno="382">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click On Close Menu" lineno="67">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click On Hamburger Menu" lineno="64">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Samfunn Category" lineno="362">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Click Sanfunn Category Menu" lineno="46">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Close Cookie Popup" lineno="407">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Create Locater Category Menu" lineno="21">
+<arguments>
+<arg>CategoryName</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Create Locater For HomepageLogo" lineno="342">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Create Locater Hamburger Menu" lineno="70">
+<arguments>
+<arg>CategoryName</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Create Locator Category Section" lineno="56">
+<arguments>
+<arg>CategoryName</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Create Locator Hamburger Menu" lineno="60">
+<arguments>
+<arg>ItemName</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Chatbot Details Home Page" lineno="299">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Color Of The Element" lineno="346">
+<arguments>
+<arg>locator</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get First Author Details" lineno="135">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Font Family Of The Element" lineno="354">
+<arguments>
+<arg>locator</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Font Of The Element" lineno="350">
+<arguments>
+<arg>locator</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Footer Link Contactus" lineno="179">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Footer TipsOss Target" lineno="210">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Footer TipsOssButton Href" lineno="192">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Footer TipsOssText" lineno="201">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Instagram Title" lineno="246">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get MaitTofield" lineno="187">
+<arguments>
+<arg>subject</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Page Name" source="..\..\..\..\..\Python381\lib\site-packages\PageObjectLibrary\pageobject.py" lineno="94">
+<arguments>
+</arguments>
+<doc>Return the name of the current page</doc>
+</kw>
+<kw name="Get PodCast Details" lineno="262">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get PodCast Details2" lineno="281">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Second Author Details" lineno="145">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Side Menu TipsOssLinkHref" lineno="228">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Side Menu TipsOssLinkTarget" lineno="219">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get Side Menu TipsOssLinkText" lineno="237">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get SocialShare FB Name From Footer" lineno="155">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get SocialShare Linkdin Name From Footer" lineno="171">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Get SocialShare Twitter Name From Footer" lineno="163">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="GetCharSet From ViewPageSource" lineno="88">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="GetFooterLinks From ViewPageSource" lineno="113">
+<arguments>
+<arg>urlOfWebSite</arg>
+<arg>exFooterLink</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="GetFooterLinks From ViewPageSource1" lineno="102">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="GetOgTitle From ViewPageSource" lineno="81">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="GetOgURL From ViewPageSource" lineno="74">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="GetSideMenu Links From ViewPageSource" lineno="123">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="GetSiteName From ViewPageSource" lineno="95">
+<arguments>
+<arg>urlOfWebSite</arg>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Scroll To SEO" lineno="415">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify Bar Color Of Bolig On HomePage" lineno="332">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify Bar Color Of BorsOgMarks On HomePage" lineno="312">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify Bar Color Of CategoryPages" lineno="337">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify Bar Color Of Dinokonomi On HomePage" lineno="317">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify Bar Color Of Grunder On HomePage" lineno="322">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+<kw name="Verify Bar Color Of Samfunn On HomePage" lineno="327">
+<arguments>
+</arguments>
+<doc></doc>
+</kw>
+</keywordspec>
